@@ -93,7 +93,7 @@ class TasksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $task = Message::find($id);
+        $task = Task::find($id);
         $task->content = $request->content;
         $task->save();
 
@@ -108,7 +108,7 @@ class TasksController extends Controller
      */
     public function destroy($id)
     {
-        $task = Message::find($id);
+        $task = Task::find($id);
         $task->delete();
 
         return redirect('/');
