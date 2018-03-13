@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<div class="col-xs-12 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-sm-8 col-ig-offset-3 col-ig-6">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +17,5 @@
         @include('commons.navbar')
         @yield('content')
     </body>
-</div>
 </html>
 
