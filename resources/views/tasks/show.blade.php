@@ -12,6 +12,7 @@
     {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
         {!! Form::submit('削除') !!}
     {!! Form::close() !!}
+    
 </div>
 
 @endsection
