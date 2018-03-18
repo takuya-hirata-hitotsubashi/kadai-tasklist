@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Status extends Migration
+class CreateStatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,6 +14,7 @@ class Status extends Migration
     {
         Schema::table('tasks', function (Blueprint $table) {
             $table->string('status', 10);
+
         });
     }
 
