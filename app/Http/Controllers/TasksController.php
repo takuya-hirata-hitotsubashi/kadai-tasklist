@@ -17,17 +17,11 @@ class TasksController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        /*if (\Auth::check()) {
-        $tasks = Task::all();
-
-        return view('tasks.index', [
-            'tasks' => $tasks,
-        ]);
-    }*/
-    
+    {  
+    //$task = Task::find($id);
     $data = [];
-        if (\Auth::check()) {
+        //if (\Auth::check()) {
+        //if (\Auth::user()->id === $task->user_id) {
             $user = \Auth::user();
             $tasks = $user->tasks()->orderBy('created_at', 'desc')->paginate(10);
 
@@ -35,7 +29,7 @@ class TasksController extends Controller
                 'user' => $user,
                 'tasks' => $tasks,
             ];
-        }
+        //}
         return view('tasks.index', $data);
     }
 
